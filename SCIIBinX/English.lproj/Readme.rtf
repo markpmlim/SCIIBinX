@@ -1,0 +1,118 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\vieww16260\viewh15740\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs38 \cf0 Introduction
+\b0 \
+\
+SCIIBinX is a simple utility meant to decode files whose extensions are BSQ/BSC. Files with these 2 types of extensions are Apple II ProDOS files encoded in the form of text blocks. Decoded BSQ files are usually encoded SHK documents which had been previously archived with ShrinkIt or GSHK. Decoded BSC files are just ordinary ProDOS files. The decoded files don't have a resource fork.\
+\
+
+\b \
+A brief history
+\b0 \
+\
+During the early days of the Internet,  e-mail networks which had problems transmitting binary files. An Apple II program called BinSCII was developed to encode an Apple II ProDOS file into printable blocks of text. This program also encodes the attributes of the original file (including its name) within the output text blocks. \
+\
+Because these blocks of text are usually transferred via e-mail, they were interspersed with arbitrary amounts of non-block text (like e-mail/news headers and messages from the sender etc). In fact, many e-mail authors cut and paste the text block (of the BSC/BSQ files) into the actual e-mail message rather than attached them.\
+\
+\
+
+\b Fast Forward
+\b0 \
+\
+SCIIBinX is developed to decode BSQ/BSC files which are still maintained in Apple2 repositories like the one at apple2.archive.umich.edu and mirrored at the following url:\
+\
+https://mirrors.apple2.org.za/apple2.archive.umich.edu/apple2\
+\
+On launching SCIIBinX, a small drop window is displayed on the Mac OS X desktop. All the user has to do is to drag-and-drop a file/file(s) with a BSQ/BSC extension from the Mac OS X desktop/window on to this drop window. The decoded file will be written to the same directory as the original BSQ/BSC file(s). If there is a file with the same name as the decoded file, it will be overwritten. Unlike Windows, the original file's ProDOS file and auxiliary types are preserved by Mac OS X as an extended file attribute.\
+\
+The program has 4 menu items to help the user.\
+\
+
+\b File Menu
+\b0 \
+
+\i Change File Extension\'85 
+\i0 menu item\
+Files downloaded from the Internet may have file extensions different from that expected. The user can use the Open Dialog to navigate to the folder of that contains the items of interest. Multiple files may be selected with Command-A. The user can choose to replace/add either a BSC or BSQ suffix to the selected file(s). \
+\
+Note: The program will not continue to the decoding stage if there is a file with the wrong file extension. The user cannot drop a folder onto the the dropped window.\
+\
+
+\b Logs Menu
+\b0 \
+
+\i Display 
+\i0 menu item\
+This command will launch Console.app which proceeds to load the file ~/Library/Application Support/SCIIBinX/messages.log and display it. The purpose of a messages log is to inform the user if there are errors encountered while decoding lots of BSQ/BSC files at one go.\
+\
+
+\i Remove
+\i0  menu item\
+Using this option, the user can delete all messages from the log file while the program is running. If he/she chooses to delete messages with Console.app, then it is advisable to exit SCIIBinX first. A third method is to navigate to the folder  ~/Library/Application Support/SCIIBinX and delete the directory. But please exit SCIIBinX first.\
+\
+Help Menu\
+
+\i SCIIBinX help
+\i0  menu item\
+This option will display the contents of this file by launching TextEdit.\
+\
+\
+
+\b QuickLook and Spotlight Plugins
+\b0 \
+We presume the user knows how to  launch the terminal program.\
+\
+These 2 plugins are written to help the user to preview and search for information embedded within the encoded file. \
+To get the QuickLook plugin working immediately, the user must run SCIIBinX and at the command prompt type:\
+	qlmanage -r\
+\
+followed by\
+\
+	qlmanage -m\
+\
+When the second command is issued, a list of QuickLook plugins currently registered with the OS is displayed. The user can type Cmd-F to search the console for QuickLookBSQ. A successful search means the QuickLook plugin embedded within SCIIBinX has been registered. The user can click on a BSC/BSQ file to preview the information encoded in the file. At the same time, the BSC/BSQ file will be displayed as an icon.\
+\
+The Spotlight plugin (named SpotlightBSQ) would have been registered immediately on a successful launching of SCIIBinX. To view the currently registered Spotlight plugins, type at the command prompt\
+\
+mdimport -L\
+\
+To confirm that SCIIBinX Spotlight plugin is currently registered, use Cmd-F to find the phrase "SpotlightBSQ".\
+\
+If the user does not want to wait for the OS to start indexing, he/she can cd to the folder which has some BSQ/BSC files and type\
+\
+mdimport -d2 *.*\
+\
+This command will display some generated information on all files within the folder.\
+\
+BTW, the only way to break the link to a QuickLook or Spotlight plugin is to delete the plugin itself. For our case, just drag-and-drop SCIIBinX into the Trash Can and then empty it.\
+\
+
+\i Some Notes on QuickLook plugin
+\i0 \
+This plugin reports some properties of the encoded Apple // ProDOS file. Particular attention should be paid to the first item: Filename. (See below)\
+\
+
+\i Some Notes on Spotlight plugin
+\i0 \
+The most important item is the filename of the encoded Apple // ProDOS file. Since the encoded file may consists of one or more segments speared over several text files (e.g. e-mail messages), the user can swiftly identify which are the relevant text files associated with a particular BinSCII file. \
+\
+All the user has to do is to type into Finder's Search box the name of the  encoded Apple // ProDOS file after opening a folder with lots of BSC/BSQ files.  The search criteria should be "Contents". To determine the name of encoded file, the user may use the QuickLook plugin or Finder's Get Info Panel  (control-click or right-mouse-click on the BSC/BSQ file). \
+\
+
+\b Technical Details
+\b0 \
+For this program to work correctly, the line endings of the text blocks of a BSQ/BSC file are expected to be CRs (ASCII code 13) which is the end-of- line char for the Apple II and classic MacOS. Nowadays, computers running on Windows and various variants of Unix are much more prevalent. As a result, the line ending of  MacOSX text files which is  LF (ASCII code 10) and Windows text files which is CRLF are also supported. By now it's obvious that BSC/BSQ files consists of printable ASCII characters.\
+\
+As mentioned above,  BSC or BSQ files are produced by an encoding program named BinSCII which incidentally can also decode the files. This program takes a ProDOS file and encodes it using a limited set of ASCII characters. If the ProDOS file is more than 12 K, it will be divided in 12 K blocks with the last block being less than or equal 12K. These binary blocks will then be encoded as segments and written out as separate BSC or BSQ files.\
+\
+SCIIBinX will combine the segments of an encoded ProDOS file and reproduce the original on the user's MacOSX desktop. It can handle the segments saved as either as a single text file or as separate text files.  Arbitrary amounts of non-block text are ignored. If an encoded file has more than 1 segment with each segment saved as a BSC/BSQ file, the user can drag-and-drop the input files in any order. The caveat: the output file must not be deleted until all segments have been decoded. On the other hand, if all segments are saved as a single file, the order of the segments is not important.\
+\
+Note: SCIIBinX checks the text files have a file extension of BSC/BSQ so the user may have to rename files downloaded from the Internet.\
+\
+There is a scenario the user should be aware of. If there are 2 sets of BSC/BSQ files within the same folder and both on decoding output a ProDOS file with the same name. The decoded file produced by the 2nd set will overwrite that output by the 1st set. What is worse is mixing the files in both sets; this will produce a corrupt output file. The onus is on the user to conduct a visual check on the 2 sets of input files. The 3rd line of each segment can be used to determine if the name of the output files are different. If the name of the output file are the same, then the user must separate the 2 sets by dragging them to separate folders.\
+\
+}
