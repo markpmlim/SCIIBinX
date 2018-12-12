@@ -13,7 +13,7 @@ c) SpotlightBSQ.mdimporter.
 The program SCIIBinX.app demonstrates how to get a Mac OS X application to accept drags-and-drops of files.
 
 
-The QuickLook module demonstrates how to return information to Mac OS X and display them as well as the generation icons for files recognized by the application.
+The QuickLook module demonstrates how to return information to Mac OS X and display them as well as the generation of icons for files recognized by the application.
 
 
 The Spotlight module demonstrates how to return information to Mac OS X Spotlight engine.
