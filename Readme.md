@@ -10,8 +10,11 @@ To test Spotlight plugin the following arguments can be passed:
 -g $(BUILD_DIR)/Debug/SpotlightBSQ.mdimporter
 -d2 /Users/marklim/Desktop/Resources/SampleBSQs/Alias.BSC
 
+
 (Info) Import: Import '/Users/marklim/Desktop/Resources/SampleBSQs/Alias.BSC' type 'appleii.binscii-archive' using '/Users/marklim/Desktop/Projects/IIGS/SCIIBinX/SpotlightBSQ/build/Release/SpotlightBSQ.mdimporter'
 2024-01-18 11:08:39.912 mdimport[367:a0f] Imported '/Users/marklim/Desktop/Resources/SampleBSQs/Alias.BSC' of type 'appleii.binscii-archive' with plugIn /Users/marklim/Desktop/Projects/IIGS/SCIIBinX/SpotlightBSQ/build/Release/SpotlightBSQ.mdimporter.
+
+
 2024-01-18 11:08:39.915 mdimport[367:a0f] Attributes: {
     ":MD:kMDItemSeedLastUsedDate" = 1;
     "_kMDItemFinderLabel" = "<null>";
@@ -37,6 +40,7 @@ To test Spotlight plugin the following arguments can be passed:
 
 
 To test QuickLook Plugin, the following arguments can be passed:
+
 
 -g $(BUILD_DIR)/Release/QuickLookBSQ.qlgenerator
 -c BSC
