@@ -1,0 +1,183 @@
+===============================================================================
+        How to use BinSCII, or Text Encoding for Fun and Profit
+               by Todd Whitesel        rev.3, 14-Dec-92
+
+BinSCII is a program for the Apple II series that encodes and decodes Apple
+ProDOS files to allow convenient and relatively error free transmission over
+email networks. BinSCII is functionally similar to unix' uuencode/uudecode
+utilities and Macintosh Bin Hqx (binhex); that is, it allows any local file,
+including the file's local attributes, to be transferred via email in a format
+that consists entirely of printable text. This allows the file to traverse the
+network unscathed, and be perfectly reconstructed on the destination system.
+
+
+        What a BinSCII File Looks Like
+
+The easiest way to identify a BinSCII encoded file is for the person who
+sent it to tell you it's BinSCII. The second easiest is to look for the name
+extensions "BSC", "BSQ" (which implies that the encoded file is a Shrinkit
+archive), or "BNS" (obsolete, but still used in some parts of the globe).
+The hard way is to look for one or more blocks of text that resemble the
+following (minus the one tab indent):
+
+        FiLeStArTfIlEsTaRt
+        ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789()
+        HFILENAME       AsU4AAAACA(4nIAg1(BAfcBFXQRtAADAA0gB
+        GVvTlzW6B09JAAAAXQBAH4hWAAAAadBFAcgHAIAAAAAAAAAAhDAAAAwSAAAAAAAA
+        GVvTUqJ2BAAPAMAABAAAA8CAAAw4AYAAAAAAAAAAAAgAaJRBAcgHFAAAeolEAAwB
+        XQBAH4hWAAAAAAAAAAwAAAAAJAAAAAAAAAAIAAAABAAAAAAAAAAAAgMACAAAAIAA
+                [ ... many more lines of similar construction ... ]
+        U60b3ZXx6fQLxHknavFB8KEvsqYPEAwJxxHwixYGwGPw9UmP05Zvv19IqxRGlSAI
+        (Yi1OKL7CAyfqJFAN)W(Ih7F5JzLrm1Rgx8jG(e2dcOgvc(6mvpw))6mopP6h85D
+        erpz7nNjyY2pI8OIbAGCHiPA4kAAiIAwKAI8DACNAIwPAAAAAAAAAAAAAAAAAAAA
+        AsIR
+
+The main menu of BinSCII 1.0.3 refers to any file containing such a block as
+'TXT'. The filename prompts use the term 'text file'. In both cases, they
+denote a ProDOS file which is assumed to contain any number of the above
+blocks, optionally interspersed with arbitrary amounts of non-block
+information (usually things like mail and news headers, and messages from the
+sender describing the contents).
+
+
+        Getting Started with BinSCII, in Three Easy Steps
+
+1.      Download the file BINSCII.EXE. (If you are receiving it as part of
+another file, edit the file so that the first and last lines begin with REM.
+Delete anything before the first REM and anything after the last REM. Save the
+result as 'text only', or print to disk, or whatever; the idea is to get a
+simple ASCII text file with no special formatting information. Step two below
+assumes that you named this file BINSCII.EXE, which is just an arbitrary name
+that I chose. Make sure there isn't already a file named BINSCII in that
+directory -- especially not the text file itself -- because the decoding
+process will fail if there is.)
+
+2.      EXEC the resulting text file from BASIC.SYSTEM (otherwise known as
+AppleSoft BASIC, or the ']' prompt under ProDOS) by typing EXEC BINSCII.EXE
+and watch the nifty lo-res thermometer bar. The decoding process will take a
+few minutes, and when it is finished a SYS file named BINSCII will have been
+created in the current directory. You should see two large numbers when it is
+finished, and they should match exactly. If they don't, something went wrong
+along the way (either in transit or in editing) and the BINSCII file will not
+be reliable, so I'd advise against running it (in other words, don't push your
+luck). You may also see a ?SYNTAX ERROR or two after the numbers; this is just
+AppleSoft burping on extra blank lines at the end of the text file and, while
+it may be disconcerting, it is nothing to worry about.
+
+3.      BinSCII is a SYS file just like AppleWorks or Basic.System, and you can
+run it from the GS/OS Finder, a ProDOS 8 program selector, the basic dash
+command (type -BINSCII from the ']'), or whatever method you prefer. This will
+bring up BinSCII's main menu; just follow the menus and prompts and you're all
+set. (Well, not quite; see below for some helpful hints about BinSCII 1.0.3.)
+
+
+        For the Curious: About the Appended EXEC File
+
+This exec file was developed by me during the summer of 1990, in an attempt to
+get BinSCII to a guy whose download environment broke Executioner. (Prior to
+that, I sent out self-extracting files created by Glen Bredon's Executioner
+program.) Executioner is much faster than this EXEC file, but it cannot deal
+with extra white space that might slip in during transmission or editing, and
+its method of encoding is less space-efficient. (The Executioner BinSCII is
+roughly 200% the size of the original, whereas this EXEC file is about 133%
+larger.)
+
+The encoding scheme I use is similar to BinSCII, but is implemented entirely
+in AppleSoft (that's why it's so slow). I made it to be rugged; in fact, it is
+far more forgiving of text file mishaps than Executioner. You will notice the
+difference if you use AppleWorks 2.0 to edit the file, because 2.0 adds spaces
+into the main data section and this file reads right through them. Executioner
+(and BinSCII 1.0.3, by the way) do not.
+
+How it works: when you type EXEC BINSCII.EXE, Basic.System (the ProDOS part of
+the BASIC environment) opens up BINSCII.EXE and uses it as 'phantom keyboard'
+input to AppleSoft -- that is, it makes AppleSoft think that you typed in the
+contents of the file, really fast and without any typos. If you edited the
+file according to instructions, the first thing AppleSoft sees will be the REM
+line, which it will ignore. Next comes a NEW, a short AppleSoft program, and a
+RUN. The AppleSoft program does the real work, and uses GET to read the actual
+data from the rest of the file; I'll leave deciphering the program itself as
+an exercise for the reader. Since it uses the same basic process as BinSCII,
+you will gain some insight into how BinSCII works by the time you are
+finished. BinSCII, however, uses a far more sophisticated integrity check, and
+can split files up into more than one text block (and successfully recreate
+the original file from the pieces). BinSCII is also much faster.
+
+
+        Important Caveats: BinSCII 1.0.3 and Various Quirks Thereof
+
+BinSCII 1.0.3 is fairly easy to operate, but its interface is admittedly
+archaic (work is progressing on a replacement, but not as fast as I'd like).
+Here are some tips and clarifications on exactly what BinSCII does and how
+to make it do your bidding without a lot of fuss.
+
+1.      When BinSCII asks you for a filename, it is a good idea to enter the
+complete name, directories and all. (Example: /DATA/DOWNLOADS/SHRINKIT.BSQ)
+The reason for this is that every time BinSCII asks you for a prefix to store
+files in, it sets the current directory there. (BinSCII does the equivalent of
+a PREFIX command with the directory you specified.) If you then do something
+else with another file, that prefix will still be in effect, and the filenames
+you give BinSCII will have to take that into account. The safest way to avoid
+all that is to always enter the complete name.
+
+2.      How the Unconvert option works: BinSCII searches the text file for a
+'FiLeStArTfIlEsTaRt' line, and then decodes a block (which contains at most a
+12K piece of the ProDOS file). It repeats this process until it reaches the
+end of the file (or an error occurs). This means that you can take all the
+BinSCII files you have and concatenate them into one big file, and (assuming
+you have the disk space for that file and its decoded counterparts) run the
+file through BinSCII all at once -- BinSCII will put each block where it
+belongs. You can just go away, grab a drink and a donut, and come back when it
+is finished. Be warned, however, that BinSCII 1.0.3 does not account for extra
+white space inside the text blocks; this is usually not a problem but it has
+been known to cause BinSCII to abort processing of a file that is otherwise
+intact. In the middle of a very long file, this can be rather annoying when it
+happens.
+
+3.      The flip side to #2 is that BinSCII also does not need to see complete
+files in every input. You can decode part 1 today, and part 2 tomorrow, and
+part three next week if you want. As long as you decode the parts into the
+same directory, and don't touch the output file until you've decoded all the
+parts, then everything works. This is a feature unique to BinSCII and is not
+possible with similar formats on other platforms. For it to work, though, the
+output file name MUST be both correct and unique within the destination
+directory or BinSCII will mangle the output file. (See #4 below.)
+
+4.      BinSCII does not check before overwriting files while it is decoding;
+if you are decoding a file and there is already a different file with the same
+name in the destination directory, BinSCII will happily trample it thinking it
+contains previously decoded pieces of the file it is decoding. The same
+applies for concatenated input files (see #2 above): if two files with the
+same name are found in the same input, BinSCII will assume that they are
+indeed the same file, even if they conflict, and will mix them together to
+produce a completely unusable output file. This almost _never_ happens, but
+the potential for danger does exist.
+
+5.      When you encode files with BinSCII, it asks if you want to use CR or
+LF. All this does is determine the newline (return) character that separates
+every line of text. All Apple and Mac programs expect CR (the return key or
+Control-M), but unix programs expect LF (Control-J or down-arrow). If you are
+using text transfer to the other system, use CR because the transfer program
+(usually Kermit or X/Y/Z-MODEM) will take care of any necessary conversions.
+(Binary transfer to a unix system is the main case in which you'd want to
+use LF.) In general, unless you are doing binary transfer to a PC clone or an
+EBCDIC mainframe, one of those two options has to work. If you look at the
+file on the other system and it prints all on a single line (CR's on an LF
+system), or it prints in a barber pole style pattern (LF's on a CR system),
+or it prints with no line breaks at all and fills the screen (this might
+happen on a really foreign system) then using the other option will almost
+definitely fix things.
+
+6.      BinSCII files are produced by encoding each 12K (or less) chunk of the
+file and outputting the result to a file in the destination directory whose
+name is formed by adding a .01, .02, .03, ..., to the original filename. (If
+the combined length is too long for ProDOS then it will lose the last few
+characters of the original filename to make things fit.) These names are just
+to keep everything organized and you can do whatever you want to them.
+
+Send any comments, questions, flames, etc. to
+Todd Whitesel
+Internet: toddpw @ cco.caltech.edu
+GEnie: A2PRO.TODDPW
+
+This file is in the public domain. I place no limits on its distribution.

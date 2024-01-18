@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE23C0A11F8447D5002324A9 /* sciibin.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE23C09F1F8447D5002324A9 /* sciibin.icns */; };
+		EE3D32191F89C8AA009695E4 /* SpotlightBSQ.mdimporter in Copy SpotlightBSQ plugin */ = {isa = PBXBuildFile; fileRef = EE042A361F89B91C00ACCD1D /* SpotlightBSQ.mdimporter */; };
+		EE70B7AD1F89D59400DCBC35 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EE70B7AB1F89D59400DCBC35 /* Credits.rtf */; };
+		EED3E46418B8C68E0022023F /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EED3E46218B8C68E0022023F /* Readme.rtf */; };
+		EEDFA6A52B50F2170043B7DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDFA6A02B50F2170043B7DB /* AppDelegate.m */; };
+		EEDFA6A72B50F2170043B7DB /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDFA6A42B50F2170043B7DB /* MainWindowController.m */; };
+		EEDFA6D42B50F3600043B7DB /* BSCError.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDFA6D32B50F3600043B7DB /* BSCError.m */; };
+		EEDFA6DD2B50F38F0043B7DB /* decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEDFA6D82B50F38F0043B7DB /* decoder.cpp */; };
+		EEDFA6DE2B50F38F0043B7DB /* FileWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = EEDFA6DC2B50F38F0043B7DB /* FileWrapper.mm */; };
+		EEDFA6E42B50F3CF0043B7DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDFA6E32B50F3CF0043B7DB /* main.m */; };
+		EEDFA6EA2B50F41C0043B7DB /* BSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDFA6E82B50F41C0043B7DB /* BSCOperation.m */; };
+		EEE434B91F877E6800A5CC93 /* QuickLookBSQ.qlgenerator in Copy QuickLookBSQ plugin */ = {isa = PBXBuildFile; fileRef = EEE433361F8771E500A5CC93 /* QuickLookBSQ.qlgenerator */; };
+		EEE7F0BE2B57F95100059110 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = EEE7F0BD2B57F95100059110 /* Readme.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE04285F1F89966C00ACCD1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEE433311F8771E500A5CC93 /* QuickLookBSQ.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
+			remoteInfo = QuickLookBSQ;
+		};
+		EE042A351F89B91C00ACCD1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE042A2E1F89B91C00ACCD1D /* SpotlightBSQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = SpotlightBSQ;
+		};
+		EE3D32031F89C890009695E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE042A2E1F89B91C00ACCD1D /* SpotlightBSQ.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
+			remoteInfo = SpotlightBSQ;
+		};
+		EEE433351F8771E500A5CC93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEE433311F8771E500A5CC93 /* QuickLookBSQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = QuickLookBSQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE8853FF1F8855A500F74092 /* Copy SpotlightBSQ plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/Spotlight;
+			dstSubfolderSpec = 1;
+			files = (
+				EE3D32191F89C8AA009695E4 /* SpotlightBSQ.mdimporter in Copy SpotlightBSQ plugin */,
+			);
+			name = "Copy SpotlightBSQ plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE434A41F877E2900A5CC93 /* Copy QuickLookBSQ plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/QuickLook;
+			dstSubfolderSpec = 1;
+			files = (
+				EEE434B91F877E6800A5CC93 /* QuickLookBSQ.qlgenerator in Copy QuickLookBSQ plugin */,
+			);
+			name = "Copy QuickLookBSQ plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* SCIIBinX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIIBinX_Prefix.pch; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* SCIIBinX-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SCIIBinX-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SCIIBinX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCIIBinX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE042A2E1F89B91C00ACCD1D /* SpotlightBSQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpotlightBSQ.xcodeproj; path = SpotlightBSQ/SpotlightBSQ.xcodeproj; sourceTree = "<group>"; };
+		EE23C0A01F8447D5002324A9 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = English; path = English.lproj/sciibin.icns; sourceTree = "<group>"; };
+		EE70B7AC1F89D59400DCBC35 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		EED3E46318B8C68E0022023F /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Readme.rtf; sourceTree = "<group>"; };
+		EEDFA69F2B50F2170043B7DB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Coordinators/AppDelegate.h; sourceTree = "<group>"; };
+		EEDFA6A02B50F2170043B7DB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Coordinators/AppDelegate.m; sourceTree = "<group>"; };
+		EEDFA6A32B50F2170043B7DB /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWindowController.h; path = Coordinators/MainWindowController.h; sourceTree = "<group>"; };
+		EEDFA6A42B50F2170043B7DB /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainWindowController.m; path = Coordinators/MainWindowController.m; sourceTree = "<group>"; };
+		EEDFA6D22B50F3600043B7DB /* BSCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSCError.h; path = Classes/BSCError.h; sourceTree = "<group>"; };
+		EEDFA6D32B50F3600043B7DB /* BSCError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSCError.m; path = Classes/BSCError.m; sourceTree = "<group>"; };
+		EEDFA6D72B50F38F0043B7DB /* crc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc.h; path = Classes/crc.h; sourceTree = "<group>"; };
+		EEDFA6D82B50F38F0043B7DB /* decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = decoder.cpp; path = Classes/decoder.cpp; sourceTree = "<group>"; };
+		EEDFA6D92B50F38F0043B7DB /* decoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = decoder.hpp; path = Classes/decoder.hpp; sourceTree = "<group>"; };
+		EEDFA6DA2B50F38F0043B7DB /* ErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = Classes/ErrorCodes.h; sourceTree = "<group>"; };
+		EEDFA6DB2B50F38F0043B7DB /* FileWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileWrapper.h; path = Classes/FileWrapper.h; sourceTree = "<group>"; };
+		EEDFA6DC2B50F38F0043B7DB /* FileWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FileWrapper.mm; path = Classes/FileWrapper.mm; sourceTree = "<group>"; };
+		EEDFA6E32B50F3CF0043B7DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Coordinators/main.m; sourceTree = "<group>"; };
+		EEDFA6E72B50F41C0043B7DB /* BSCOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSCOperation.h; path = Classes/BSCOperation.h; sourceTree = "<group>"; };
+		EEDFA6E82B50F41C0043B7DB /* BSCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSCOperation.m; path = Classes/BSCOperation.m; sourceTree = "<group>"; };
+		EEDFA6E92B50F41C0043B7DB /* codingMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = codingMap.h; path = Classes/codingMap.h; sourceTree = "<group>"; };
+		EEE433311F8771E500A5CC93 /* QuickLookBSQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickLookBSQ.xcodeproj; path = QuickLookBSQ/QuickLookBSQ.xcodeproj; sourceTree = "<group>"; };
+		EEE7F0BD2B57F95100059110 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EEDFA6E72B50F41C0043B7DB /* BSCOperation.h */,
+				EEDFA6E82B50F41C0043B7DB /* BSCOperation.m */,
+				EEDFA6E92B50F41C0043B7DB /* codingMap.h */,
+				EEDFA6D72B50F38F0043B7DB /* crc.h */,
+				EEDFA6D82B50F38F0043B7DB /* decoder.cpp */,
+				EEDFA6D92B50F38F0043B7DB /* decoder.hpp */,
+				EEDFA6DA2B50F38F0043B7DB /* ErrorCodes.h */,
+				EEDFA6DB2B50F38F0043B7DB /* FileWrapper.h */,
+				EEDFA6DC2B50F38F0043B7DB /* FileWrapper.mm */,
+				EEDFA6D22B50F3600043B7DB /* BSCError.h */,
+				EEDFA6D32B50F3600043B7DB /* BSCError.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* SCIIBinX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* XBSQ */ = {
+			isa = PBXGroup;
+			children = (
+				EEE7F0BD2B57F95100059110 /* Readme.md */,
+				EEDFA6AF2B50F2610043B7DB /* Plugins */,
+				EEDFA69E2B50F1EE0043B7DB /* Coordinators */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = XBSQ;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EEDFA6E32B50F3CF0043B7DB /* main.m */,
+				256AC3F00F4B6AF500CF3369 /* SCIIBinX_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE70B7AB1F89D59400DCBC35 /* Credits.rtf */,
+				8D1107310486CEB800E47090 /* SCIIBinX-Info.plist */,
+				EE23C09F1F8447D5002324A9 /* sciibin.icns */,
+				EED3E46218B8C68E0022023F /* Readme.rtf */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE042A2F1F89B91C00ACCD1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE042A361F89B91C00ACCD1D /* SpotlightBSQ.mdimporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEDFA69E2B50F1EE0043B7DB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				EEDFA69F2B50F2170043B7DB /* AppDelegate.h */,
+				EEDFA6A02B50F2170043B7DB /* AppDelegate.m */,
+				EEDFA6A32B50F2170043B7DB /* MainWindowController.h */,
+				EEDFA6A42B50F2170043B7DB /* MainWindowController.m */,
+			);
+			name = Coordinators;
+			sourceTree = "<group>";
+		};
+		EEDFA6AF2B50F2610043B7DB /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				EEE433311F8771E500A5CC93 /* QuickLookBSQ.xcodeproj */,
+				EE042A2E1F89B91C00ACCD1D /* SpotlightBSQ.xcodeproj */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		EEE433321F8771E500A5CC93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE433361F8771E500A5CC93 /* QuickLookBSQ.qlgenerator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* SCIIBinX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SCIIBinX" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				EEE434A41F877E2900A5CC93 /* Copy QuickLookBSQ plugin */,
+				EE8853FF1F8855A500F74092 /* Copy SpotlightBSQ plugin */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE0428601F89966C00ACCD1D /* PBXTargetDependency */,
+				EE3D32041F89C890009695E4 /* PBXTargetDependency */,
+			);
+			name = SCIIBinX;
+			productInstallPath = "$(HOME)/Applications";
+			productName = XBSQ;
+			productReference = 8D1107320486CEB800E47090 /* SCIIBinX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SCIIBinX" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* XBSQ */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EEE433321F8771E500A5CC93 /* Products */;
+					ProjectRef = EEE433311F8771E500A5CC93 /* QuickLookBSQ.xcodeproj */;
+				},
+				{
+					ProductGroup = EE042A2F1F89B91C00ACCD1D /* Products */;
+					ProjectRef = EE042A2E1F89B91C00ACCD1D /* SpotlightBSQ.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* SCIIBinX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EE042A361F89B91C00ACCD1D /* SpotlightBSQ.mdimporter */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SpotlightBSQ.mdimporter;
+			remoteRef = EE042A351F89B91C00ACCD1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEE433361F8771E500A5CC93 /* QuickLookBSQ.qlgenerator */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QuickLookBSQ.qlgenerator;
+			remoteRef = EEE433351F8771E500A5CC93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				EED3E46418B8C68E0022023F /* Readme.rtf in Resources */,
+				EE23C0A11F8447D5002324A9 /* sciibin.icns in Resources */,
+				EE70B7AD1F89D59400DCBC35 /* Credits.rtf in Resources */,
+				EEE7F0BE2B57F95100059110 /* Readme.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDFA6A52B50F2170043B7DB /* AppDelegate.m in Sources */,
+				EEDFA6A72B50F2170043B7DB /* MainWindowController.m in Sources */,
+				EEDFA6D42B50F3600043B7DB /* BSCError.m in Sources */,
+				EEDFA6DD2B50F38F0043B7DB /* decoder.cpp in Sources */,
+				EEDFA6DE2B50F38F0043B7DB /* FileWrapper.mm in Sources */,
+				EEDFA6E42B50F3CF0043B7DB /* main.m in Sources */,
+				EEDFA6EA2B50F41C0043B7DB /* BSCOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE0428601F89966C00ACCD1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickLookBSQ;
+			targetProxy = EE04285F1F89966C00ACCD1D /* PBXContainerItemProxy */;
+		};
+		EE3D32041F89C890009695E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpotlightBSQ;
+			targetProxy = EE3D32031F89C890009695E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		EE23C09F1F8447D5002324A9 /* sciibin.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE23C0A01F8447D5002324A9 /* English */,
+			);
+			name = sciibin.icns;
+			sourceTree = "<group>";
+		};
+		EE70B7AB1F89D59400DCBC35 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE70B7AC1F89D59400DCBC35 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		EED3E46218B8C68E0022023F /* Readme.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED3E46318B8C68E0022023F /* English */,
+			);
+			name = Readme.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SCIIBinX_Prefix.pch;
+				INFOPLIST_FILE = "SCIIBinX-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SCIIBinX;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SCIIBinX_Prefix.pch;
+				INFOPLIST_FILE = "SCIIBinX-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SCIIBinX;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SCIIBinX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SCIIBinX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,2 @@
+-g $(BUILD_DIR)/../SpotlighBSQ.mdimporter
+/Users/marklim/Desktop/Projects/IIGS/SCIIBinX/SpotlightBSQ/build/Release/SpotlightBSQ.mdimporter
