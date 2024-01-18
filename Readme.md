@@ -7,7 +7,7 @@ In 1992, BinSCII was developed to help distribute AppleII programs via emails. T
 
 
 
-The program **SCIIBinX** is based on the decoding suggested by Todd Whitesel. Refer to the Documentation folder for details on the format of **BinSCII** files. To facilitate the decoding of **BinSCII** files on the macOS, the program recognises two file extensions viz. **BSC** and **BSQ**. Usually, **BSQ** files encode a ShrinkIt Archive whereas **BSC** files encode AppleII programs or data files.
+The program **SCIIBinX** is based on the decoding suggested by Todd Whitesel. Refer to the Documentation folder for details on the format of **BinSCII** files. To facilitate the decoding of **BinSCII** files on the macOS, the program recognises two file extensions viz. **BSC** and **BSQ**. Usually, **BSQ** files encode a ShrinkIt Archive whereas **BSC** files encode AppleII a single program or data file.
 
 There is user documentation under the program's **Help** Menu. **SCIIBinX** comes with 2 plugins to help the user decide if it's worth while decoding a **BSC** or **BSQ** file. The program can change to file extension of any *TEXT* file to **BSC** or **BSQ**.
 
@@ -22,6 +22,9 @@ To test Spotlight plugin the following arguments can be passed:
 <br />
 <br />
 The spotlight plugin will output to the console when the executable is run under XCode. The programmer/tester will have to change the pathname to point at the correc location of a test file.
+
+<br />
+<br />
 
 To test QuickLook Plugin, the following arguments can be passed:
 <br />
