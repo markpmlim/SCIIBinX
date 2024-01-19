@@ -21,13 +21,11 @@ Unfortunately, Apple has never updated their documentation on debugging these tw
 If you are debugging under XCode 4.x or later, click on the **"Edit Scheme"** Menu and select the "Edit Scheme..." menu item. In the **Info** pane, click on Popup menu labelled *Executable* and then select menu item *Other...*. Another panel labelled *Choose an executable to launch* will be displayed. To navigate to the folder **/usr/bin**, type Shift+Open-Clover+g. Yet another panel labelled "Go to the folder" will appear. Click on the Text Edit Control and type **/usr/bin**. Choose the executable file **qlmanage**. (Hint: type **ql**). Finally click on the **GO** button.
 
 <br />
-<br />
 
 ![](Documentation/QuickLookInfoTab.png)
 
 Next click on "Argument" pane and enter the following arguments to be passed to the executable **qlmanage**:
 
-<br />
 <br />
 
 -g $(BUILD_DIR)/Release/QuickLookBSQ.qlgenerator
@@ -41,12 +39,14 @@ Next click on "Argument" pane and enter the following arguments to be passed to 
 ![](Documentation/QuickLookArgTab.png)
 
 <br />
-<br />
 
-To test the Spotlight plugin, repeat the steps above. The executable is "mdimport". And pass the following arguments.
+To test the Spotlight plugin, repeat the steps above. The executable is **mdimport**.
 
 ![](Documentation/SpotlightInfoTab.png)
-
+<br />
+<br />
+ And pass the following arguments.
+ 
 -g $(BUILD_DIR)/Debug/SpotlightBSQ.mdimporter
 <br />
 -d2 /Users/marklim/Desktop/Resources/SampleBSQs/Alias.BSC
