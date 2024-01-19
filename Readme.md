@@ -40,6 +40,13 @@ Next click on "Argument" pane and enter the following arguments to be passed to 
 
 <br />
 
+On running the QuickLook generator under XCode:
+
+![](Documentation/OutputQL.png)
+
+<br />
+<br />
+
 To test the Spotlight plugin, repeat the steps above. The executable is **mdimport**.
 
 ![](Documentation/SpotlightInfoTab.png)
