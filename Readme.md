@@ -18,14 +18,14 @@ Finally, selecting the menu item **SCIIBin Help** under the program's **Help** M
 
 Unfortunately, Apple has never updated their documentation on debugging these two kind of plugins. Given below are brief details on how to debug the QuickLook plugin of the program.       
 
-If you are debugging under XCode 4.x or later, click on the **"Edit Scheme"** Menu and select the "Edit Scheme..." menu item. In the **Info** pane, click on Popup menu labelled *Executable* and then select menu item *Other...*. Another panel labelled *Choose an executable to launch* will be displayed. To navigate to the folder **/usr/bin**, type Shift+Open-Clover+g. Yet another panel labelled "Go to the folder" will appear. Click on the Text Edit Control and type **/usr/bin**. Choose the executable file **qlmanage**. (Hint: type **ql**.)
+If you are debugging under XCode 4.x or later, click on the **"Edit Scheme"** Menu and select the "Edit Scheme..." menu item. In the **Info** pane, click on Popup menu labelled *Executable* and then select menu item *Other...*. Another panel labelled *Choose an executable to launch* will be displayed. To navigate to the folder **/usr/bin**, type Shift+Open-Clover+g. Yet another panel labelled "Go to the folder" will appear. Click on the Text Edit Control and type **/usr/bin**. Choose the executable file **qlmanage**. (Hint: type **ql**). Finally click on the **GO** button.
 
 <br />
 <br />
 
 ![](Documentation/QuickLookInfoTab.png)
 
-Next click on "Argument" pane and enter the following arguments to be passed the executable:
+Next click on "Argument" pane and enter the following arguments to be passed to the executable **qlmanage**:
 
 <br />
 <br />
@@ -36,14 +36,14 @@ Next click on "Argument" pane and enter the following arguments to be passed the
 <br />
 -p /Users/marklim/Desktop/Resources/SampleBSQs/Alias.BSC
 
-You have to set your own pathname to point at the correct location of the **BSC** or **BSQ** file.
+**Note**: You have to set your own pathname to point at the correct disk location of the **BSC** or **BSQ** file.
 
 ![](Documentation/QuickLookArgTab.png)
 
 <br />
 <br />
 
-To test Spotlight plugin, repeat the steps above. The executable is "mdimport". And pass the following arguments.
+To test the Spotlight plugin, repeat the steps above. The executable is "mdimport". And pass the following arguments.
 
 ![](Documentation/SpotlightInfoTab.png)
 
